@@ -1,5 +1,5 @@
 function setup() {
-  createCanvas(400, 400);
+  canvas=createCanvas(w, h);
   noLoop();
   drawMondrian();
 }
