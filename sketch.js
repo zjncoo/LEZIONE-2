@@ -12,7 +12,7 @@ function draw() {
   
   // Draw the grid lines (black lines)
   stroke(0);
-  strokeWeight(7);
+  strokeWeight(5);
   
   // Red square
   fill(255, 0, 0);
@@ -21,26 +21,12 @@ function draw() {
   // Blue square
   fill(0, 0, 255);
   rect(offsetX, offsetY + 200, 100, 100);
-
-  // white 1 square
-  fill(255, 255, 255);
-  rect(offsetX, offsetY, 100, 100);
-
-  line(offsetX, offsetY + 94, offsetX + 100, offsetY + 94);
-  line(offsetX, offsetY + 108, offsetX + 100, offsetY + 108);
-
-  // white 2 square
-  fill(255, 255, 255);
-  rect(offsetX, offsetY + 100, 100, 100);
   
   // Yellow square
   fill(255, 255, 0);
   rect(offsetX + 250, offsetY + 250, 50, 50);
-
-  // white square
-  fill(255, 255, 255);
-  rect(offsetX + 250, offsetY + 200, 50, 50);
   
+  // Black lines (manual positions)
   stroke(0);
   strokeWeight(7);
   line(offsetX + 250, offsetY +246, offsetX + 300, offsetY + 246);
