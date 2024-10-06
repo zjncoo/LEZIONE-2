@@ -46,7 +46,13 @@ function draw() {
   line(offsetX + 250, offsetY +246, offsetX + 300, offsetY + 246);
   line(offsetX + 250, offsetY +254, offsetX + 300, offsetY + 254);
   line(offsetX + 100, offsetY +300, offsetX + 300, offsetY + 300);
+
+  strokeWeight(0)
+  fill(0)
+
+  text('Composition with Red, Blue and Yellow - Piet Mondrian', offsetX, offsetY + 320);
 }
+
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight); // Resize canvas when window is resized
