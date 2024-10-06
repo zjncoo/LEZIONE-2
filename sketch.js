@@ -1,45 +1,44 @@
 function setup() {
-  createCanvas(windowWidth, windowHeight); // Full screen canvas
-  noLoop();
-  drawMondrian();
+  createCanvas(windowWidth, windowHeight); // Fullscreen canvas
+  noLoop(); // No need to continuously redraw
 }
 
-function drawMondrian() {
+function draw() {
   background(255); // White background
   
-  // Set the proportions relative to the screen size
-  let w = windowWidth;
-  let h = windowHeight;
+  // Set size for the main square and positions
+  let squareSize = 300; // Fixed square size
+  let offsetX = (windowWidth - squareSize) / 2; // Center the square
+  let offsetY = (windowHeight - squareSize) / 2;
   
-  stroke(0); // Black stroke for the grid
-  strokeWeight(w * 0.02); // Proportional stroke width
+  // Draw the grid lines (black lines)
+  stroke(0);
+  strokeWeight(5);
   
-  // Red rectangle
+  // Red square
   fill(255, 0, 0);
-  rect(w * 0.1, h * 0.1, w * 0.4, h * 0.4);
+  rect(offsetX + 100, offsetY, 200, 200);
   
-  // Yellow rectangle
-  fill(255, 255, 0);
-  rect(w * 0.52, h * 0.1, w * 0.25, h * 0.25);
-  
-  // Blue rectangle
+  // Blue square
   fill(0, 0, 255);
-  rect(w * 0.1, h * 0.52, w * 0.2, h * 0.2);
+  rect(offsetX, offsetY + 200, 100, 100);
   
-  // Black rectangle
-  fill(0);
-  rect(w * 0.1, h * 0.75, w * 0.2, h * 0.1);
+  // Yellow square
+  fill(255, 255, 0);
+  rect(offsetX + 250, offsetY + 250, 50, 50);
   
-  // Grey rectangle
-  fill(200);
-  rect(w * 0.35, h * 0.52, w * 0.3, h * 0.2);
+  // Black lines (manual positions)
+  stroke(0);
+  strokeWeight(5);
   
-  // White rectangle (background already white)
-  noFill();
-  rect(w * 0.52, h * 0.35, w * 0.25, h * 0.4);
+  // Vertical black line
+  line(offsetX + 100, offsetY, offsetX + 100, offsetY + 300);
+  
+  // Horizontal black line
+  line(offsetX, offsetY + 200, offsetX + 300, offsetY + 200);
 }
 
 function windowResized() {
-  resizeCanvas(windowWidth, windowHeight); // Resize canvas on window resize
-  drawMondrian(); // Redraw the Mondrian when resizing
+  resizeCanvas(windowWidth, windowHeight); // Resize canvas when window is resized
+  draw(); // Redraw the painting after resizing
 }
