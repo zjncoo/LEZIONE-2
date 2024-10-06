@@ -3,6 +3,37 @@ html, body {
   padding: 0;
 }
 
-canvas {
+/* Navbar Styles */
+.logo-link {
   display: block;
+}
+
+.logo {
+  width: 50px; /* Small logo size */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Transparent Navigation Bar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  backdrop-filter: blur(10px); /* Blur effect */
+  align-items: center;
+  padding: 15px 0;
+  background-color: rgba(255, 255, 255, 0); /* Transparent background */
+  z-index: 1000;
+}
+
+/* Logo Styling */
+.logo {
+  width: 100px; /* Adjust size of the logo */
+  transition: transform 0.3s ease;
+  padding: 10%;
+}
+
+.logo-link:hover .logo {
+  transform: scale(1.1); /* Slight zoom on hover */
 }
