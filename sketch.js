@@ -1,9 +1,4 @@
 function setup() {
-  canvas=createCanvas(w, h);
-  noLoop();
-  drawMondrian();
-}
-function setup() {
   createCanvas(windowWidth, windowHeight); // Full screen canvas
   noLoop();
   drawMondrian();
